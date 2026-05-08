@@ -13,5 +13,11 @@ Vortex is an integrated IoT system designed to automate library lighting based o
 - Software: C++.
 - Logic: Integrated sensor-trigger circuitry.
 
+## How to Use
+1.  Hardware Setup: Connect the ESP32, IR sensors, and LCD according to the pin definitions in Vortex_Logic.cpp.
+2.  Software: Upload the code to your ESP32 using Arduino IDE.
+3.  Observation: Monitor the LCD for occupancy count and status.
+
 ## Project Links
 - [Watch Demo Video](https://youtu.be/A86xE8A7t9c?si=fAl5cX_3Je_Ne2yM)
+- [Full Project Documentation (Google Drive)](https://drive.google.com/file/d/1GWFACUwmbQ3hYQ3HUL0JdFRagYsOX31Z/view?usp=drive_link)
