@@ -2,7 +2,7 @@
 
 # 📚 VORTEX: Smart Library Occupancy & Energy-Saving System
 
-![Vortex Smart Library Cover](Images/cover.jpg)
+![Vortex Smart Library Cover](images/cover.jpg)
 
 **An IoT energy-saving system built on ESP32, dual IR sensors, and automated relay control to optimize library space and eliminate electricity waste in real time.**
 
@@ -66,12 +66,12 @@ The components are mapped as defined in the firmware configuration:
 
 **Prototype photos:**
 
-- [Prototype – Angle 1](Images/photo_2026-11-09_01-27-12.jpg)
-- [Prototype – Angle 2](Images/photo_2026-11-09_01-27-15.jpg)
-- [Prototype – Angle 3](Images/photo_2026-11-09_01-27-18.jpg)
-- [Prototype – Angle 4](Images/photo_2026-11-09_01-27-21.jpg)
+- [Prototype – Angle 1](images/photo_2026-11-09_01-27-12.jpg)
+- [Prototype – Angle 2](images/photo_2026-11-09_01-27-15.jpg)
+- [Prototype – Angle 3](images/photo_2026-11-09_01-27-18.jpg)
+- [Prototype – Angle 4](images/photo_2026-11-09_01-27-21.jpg)
 
-🎥 **Demo video:** [Watch the demonstration](Images/vid.MOV)
+🎥 **Demo video:** [Watch the demonstration](images/vid.MOV)
 
 ---
 
@@ -101,13 +101,13 @@ The components are mapped as defined in the firmware configuration:
 ## 📂 Repository Structure
 
 ```text
-Vortex-Smart-System/
+Smart-Library-Occupancy-System/
 │
 ├── docs/                          # Project report & presentation
 │   ├── Project-Report.pdf
 │   └── Project-Presentation.pdf
 │
-├── Images/                        # Cover, hardware photos, and demo video
+├── images/                        # Cover, hardware photos, and demo video
 │   ├── cover.jpg
 │   ├── photo_2026-11-09_01-27-12.jpg
 │   ├── photo_2026-11-09_01-27-15.jpg
