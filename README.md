@@ -64,13 +64,12 @@ The components are mapped as defined in the firmware configuration:
 
 ## 📸 Prototype & Demo
 
-| Prototype – Angle 1 | Prototype – Angle 2 |
-| :---: | :---: |
-| ![Prototype Angle 1](Images/photo_2026-11-09_01-27-12.jpg) | ![Prototype Angle 2](Images/photo_2026-11-09_01-27-15.jpg) |
+**Prototype photos:**
 
-| Prototype – Angle 3 | Prototype – Angle 4 |
-| :---: | :---: |
-| ![Prototype Angle 3](Images/photo_2026-11-09_01-27-18.jpg) | ![Prototype Angle 4](Images/photo_2026-11-09_01-27-21.jpg) |
+- [Prototype – Angle 1](Images/photo_2026-11-09_01-27-12.jpg)
+- [Prototype – Angle 2](Images/photo_2026-11-09_01-27-15.jpg)
+- [Prototype – Angle 3](Images/photo_2026-11-09_01-27-18.jpg)
+- [Prototype – Angle 4](Images/photo_2026-11-09_01-27-21.jpg)
 
 🎥 **Demo video:** [Watch the demonstration](Images/vid.MOV)
 
