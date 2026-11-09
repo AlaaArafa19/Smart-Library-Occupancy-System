@@ -18,6 +18,7 @@
 
 - [Overview](#-overview)
 - [Features](#-features)
+- [System Architecture](#️-system-architecture)
 - [Hardware Components & Pin Mapping](#️-hardware-components--pin-mapping)
 - [Prototype & Demo](#-prototype--demo)
 - [System Logic & Operation](#️-system-logic--operation)
@@ -44,6 +45,31 @@ Two active IR sensors provide accurate people counting, while an ESP32 microcont
 - **Live occupancy status** (`Empty` / `Medium` / `Crowded`) on a 16x2 I2C LCD.
 - **Safe counting logic**: the counter never drops below zero.
 - **Standalone operation** powered by rechargeable lithium batteries.
+
+---
+
+## 🏗️ System Architecture
+
+![Vortex System Architecture Diagram](images/architecture-diagram.png)
+
+The system follows a simple **Input → Processing → Output** pipeline, powered by a standalone battery source.
+
+### Layers
+
+| Layer | Components | Role |
+| :--- | :--- | :--- |
+| **Input** | Entry IR Sensor (`GPIO 27`), Exit IR Sensor (`GPIO 25`) | Detect visitors crossing the entrance and exit paths and send digital signals (`HIGH`/`LOW`) to the ESP32 |
+| **Processing** | ESP32 Microcontroller | Runs the firmware: counts people, decides the lighting state, and classifies the occupancy status |
+| **Output** | LCD 16x2 (I2C), Relay Module (`GPIO 26`), Library Lighting | Displays the count and status, and switches the lights on or off |
+| **Power** | Lithium batteries | Rechargeable supply that powers the ESP32 and connected modules for standalone operation |
+
+### Data Flow
+
+1. **Detection:** the Entry or Exit IR sensor detects a person and sends a digital signal to the ESP32.
+2. **Counting:** the ESP32 updates the visitor counter (`count++` on entry, `count--` on exit, never below zero).
+3. **Decision:** based on the counter, the ESP32 decides the lighting state (`count > 0` → lights ON, `count == 0` → lights OFF) and classifies the status (`Empty` / `Medium` / `Crowded`).
+4. **Display:** the count and status are sent to the 16x2 LCD over the **I2C bus** (`SDA: GPIO 33`, `SCL: GPIO 32`).
+5. **Actuation:** a control signal on `GPIO 26` drives the relay module, which switches the library lighting.
 
 ---
 
@@ -107,7 +133,8 @@ Smart-Library-Occupancy-System/
 │   ├── Project-Report.pdf
 │   └── Project-Presentation.pdf
 │
-├── images/                        # Cover, hardware photos, and demo video
+├── images/                        # Cover, architecture diagram, hardware photos, and demo video
+│   ├── architecture-diagram.png
 │   ├── cover.jpg
 │   ├── photo_2026-11-09_01-27-12.jpg
 │   ├── photo_2026-11-09_01-27-15.jpg
